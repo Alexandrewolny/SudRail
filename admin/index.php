@@ -1,18 +1,24 @@
-<!DOCTYPE html>
+<?php session_start()?><!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<meta charset="utf-8">
 </head>
 <body>
+<?php
 
+  require_once '../database.php';
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+  if(!$_SESSION['admin']) {
+
+  	header('location:login.php');
+  }
+?><nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
     <div class="container">
-        <img src="imgsudrail/siteon.png" class="Imgentete">
+        <img src="../imgsudrail/siteon.png" class="Imgentete">
             <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                 ☰
             </button>
@@ -114,21 +120,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="imgsudrail/hdf.jpg" alt="First slide" height="700px;" class="carous">
+      <img class="d-block w-100" src="../imgsudrail/hdf.jpg" alt="First slide" height="700px;" class="carous">
       <div class="carousel-caption d-none d-md-block">
     <h5><button class="boutoncarousel">Voir les infos ville par ville</button></h5>
     <p>...</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="imgsudrail/journal.jpg" alt="Second slide" height="700px;" class="carous">
+      <img class="d-block w-100" src="../imgsudrail/journal.jpg" alt="Second slide" height="700px;" class="carous">
       <div class="carousel-caption d-none d-md-block">
     <h5><button class="boutoncarousel">Voir le journal</button></h5>
     <p>...</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="imgsudrail/manif.jpg" alt="Third slide" height="700px;" class="carous"> 
+      <img class="d-block w-100" src="../imgsudrail/manif.jpg" alt="Third slide" height="700px;" class="carous"> 
       <div class="carousel-caption d-none d-md-block">
     <h5><button class="boutoncarousel">Voir les prochains regroupements</button></h5>
     <p>...</p>
@@ -164,7 +170,7 @@
   <div class="row">
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Mieux comprendre </h5>
     <p class="card-text">Texte</p>
@@ -174,7 +180,7 @@
     </div>
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Texte</p>
@@ -184,7 +190,7 @@
     </div>
     <div class="col-sm">
      <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Texte</p>
@@ -206,7 +212,7 @@
   <div class="row">
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Mieux comprendre </h5>
     <p class="card-text">Texte</p>
@@ -216,7 +222,7 @@
     </div>
     <div class="col-sm">
       <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Texte</p>
@@ -226,7 +232,7 @@
     </div>
     <div class="col-sm">
      <div class="card" style="width: 18rem;">
-  <img src="imgsudrail/card1.jpg" class="card-img-top" alt="...">
+  <img src="../imgsudrail/card1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Texte</p>
@@ -299,7 +305,7 @@
       <!-- Grid column -->
       <div class="col-md-8 col-12 mt-5">
         <h5 style="line-height: 1.7rem">Vous pouvez également nous suivre sur nos réseaux ! </h5> <br>
-        <a href="#"><img src="facebook.svg" class="fb"></a> <img src="facebook.svg" class="fb"> <img src="facebook.svg" class="fb">
+        <a href="#"><img src="../facebook.svg" class="fb"></a> <img src="../facebook.svg" class="fb"> <img src="../facebook.svg" class="fb">
 
         <br>
         <br>
